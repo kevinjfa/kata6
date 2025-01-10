@@ -12,10 +12,10 @@ public class StringsCommand implements Command {
                     return "Las palabras son diferentes";
                 }
             case "index":
-                if (!w1.contains(w2)) {
-                    return "No se encuentra ese caracter.";
-                } else if (w2.length() > 1) {
+                if (w2.length() > 1) {
                     return "Una palabra no es un caracter.";
+                } else if (!w1.contains(w2)) {
+                    return "No se encuentra ese caracter.";
                 } else {
                     return "El caracter está en la posición " + String.valueOf(w1.indexOf(w2));
                 }
