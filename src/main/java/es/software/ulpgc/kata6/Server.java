@@ -1,5 +1,7 @@
 package es.software.ulpgc.kata6;
 
+import es.software.ulpgc.kata6.adapters.HttpAdapter;
+
 import static spark.Spark.*;
 
 public class Server {
@@ -10,6 +12,6 @@ public class Server {
             String w1 = req.queryParams("w1");
             String w2 = req.queryParams("w2");
             return HttpAdapter.adapt(command, w1, w2);
-        })
+        });
     }
 }
